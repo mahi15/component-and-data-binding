@@ -6,8 +6,10 @@ import { Component, EventEmitter, OnInit, Output, ViewChild, ElementRef } from '
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
+// tslint:disable-next-line: no-output-rename
   @Output('sCreated') serverCreated = new EventEmitter<{serverName: string, serverContent: string}>();
-  @Output( "bpCreated" ) blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
+// tslint:disable-next-line: no-output-rename
+  @Output( 'bpCreated' ) blueprintCreated = new EventEmitter<{serverName: string, serverContent: string}>();
   // newServerName = '';
   // newServerContent = '';
   @ViewChild('serverContentInput') serverContentInput: ElementRef;
@@ -27,5 +29,4 @@ export class CockpitComponent implements OnInit {
       serverContent: this.serverContentInput.nativeElement.value
     });
   }
-
 }
